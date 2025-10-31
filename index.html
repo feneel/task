@@ -522,8 +522,177 @@
         </div>
 
       </div>
-    </section>
 
+ <div class="row g-4 align-items-start">
+
+  <!-- LEFT FAQ INTRO -->
+  <div class="col-lg-5">
+    <div class="faq-heading">
+      Have a question? Check out<br />
+      the FAQ
+    </div>
+
+    <div class="faq-text">
+      Maecenas tempus tellus eget condimentum rhoncus sem quam semper
+      libero sit amet adipiscing sem neque sed ipsum.
+    </div>
+
+    <div class="faq-arrow"> <svg width="160" height="140" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:160px; height:auto;" > <!-- large loose loop then swing down-right --> <path d="M40 50 C170 25, 60 20, 62 38 C64 55, 32 55, 38 75 C48 100, 80 105, 110 115" stroke="#0d6efd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" /> <!-- arrow head pointing down-right --> <path d="M102 108 L123 117 L107 121" stroke="#0d6efd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" /> </svg> </div>
+  </div>
+
+  <!-- RIGHT FAQ LIST -->
+  <div class="col-lg-7">
+    <div id="faqList">
+
+      <div class="faq-item">
+        <button
+          class="faq-question-btn open"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq1"
+          aria-expanded="true"
+          aria-controls="faq1"
+          data-faq-btn="faq1"
+        >
+          <span>Non consectetur a erat nam at lectus urna duis?</span>
+          <span class="faq-chevron" data-faq-chevron="faq1">▾</span>
+        </button>
+
+        <div id="faq1"
+             class="collapse show"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
+            volutpat lacus laoreet non curabitur gravida. Venenatis lectus
+            magna fringilla urna porttitor rhoncus dolor purus non.
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="faq-item">
+        <button
+          class="faq-question-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq2"
+          aria-expanded="false"
+          aria-controls="faq2"
+          data-faq-btn="faq2"
+        >
+          <span>Feugiat scelerisque varius morbi enim nunc faucibus?</span>
+          <span class="faq-chevron" data-faq-chevron="faq2">›</span>
+        </button>
+
+        <div id="faq2"
+             class="collapse"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Answer goes here.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="faq-question-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq3"
+          aria-expanded="false"
+          aria-controls="faq3"
+          data-faq-btn="faq3"
+        >
+          <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span>
+          <span class="faq-chevron" data-faq-chevron="faq3">›</span>
+        </button>
+
+        <div id="faq3"
+             class="collapse"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Answer goes here.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="faq-question-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq4"
+          aria-expanded="false"
+          aria-controls="faq4"
+          data-faq-btn="faq4"
+        >
+          <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span>
+          <span class="faq-chevron" data-faq-chevron="faq4">›</span>
+        </button>
+
+        <div id="faq4"
+             class="collapse"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Answer goes here.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="faq-item">
+        <button
+          class="faq-question-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq5"
+          aria-expanded="false"
+          aria-controls="faq5"
+          data-faq-btn="faq5"
+        >
+          <span>Tempus quam pellentesque nec nam aliquam sem et tortor?</span>
+          <span class="faq-chevron" data-faq-chevron="faq5">›</span>
+        </button>
+
+        <div id="faq5"
+             class="collapse"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Answer goes here.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="faq-question-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faq6"
+          aria-expanded="false"
+          aria-controls="faq6"
+          data-faq-btn="faq6"
+        >
+          <span>Perspiciatis quod quo quos nulla quo illum ullam?</span>
+          <span class="faq-chevron" data-faq-chevron="faq6">›</span>
+        </button>
+
+        <div id="faq6"
+             class="collapse"
+             data-bs-parent="#faqList">
+          <div class="faq-answer">
+            Answer goes here.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
 
 
 
@@ -545,6 +714,47 @@
       this.classList.add('active');
     });
   });
+
+
+  document.querySelectorAll('#faqList .collapse').forEach(function(section) {
+
+    section.addEventListener('show.bs.collapse', function () {
+      var id = this.getAttribute('id'); // e.g. "faq3"
+
+
+      document.querySelectorAll('[data-faq-btn]').forEach(function(btn) {
+        btn.classList.remove('open');
+      });
+
+
+      document.querySelectorAll('[data-faq-chevron]').forEach(function(ch) {
+        ch.textContent = '›';
+      });
+
+
+      var thisBtn = document.querySelector('[data-faq-btn="' + id + '"]');
+      var thisChevron = document.querySelector('[data-faq-chevron="' + id + '"]');
+      if (thisBtn) thisBtn.classList.add('open');
+      if (thisChevron) thisChevron.textContent = '▾';
+    });
+
+
+    section.addEventListener('hide.bs.collapse', function () {
+      var id = this.getAttribute('id');
+
+      var thisBtn = document.querySelector('[data-faq-btn="' + id + '"]');
+      var thisChevron = document.querySelector('[data-faq-chevron="' + id + '"]');
+      if (thisBtn) thisBtn.classList.remove('open');
+      if (thisChevron) thisChevron.textContent = '›';
+    });
+  });
+
+  (function initFAQ(){
+    var openBtn = document.querySelector('[data-faq-btn="faq1"]');
+    var openChevron = document.querySelector('[data-faq-chevron="faq1"]');
+    if (openBtn) openBtn.classList.add('open');
+    if (openChevron) openChevron.textContent = '▾';
+  })();
 </script>
   
 </body>
